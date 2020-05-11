@@ -1,0 +1,33 @@
+<div class="container-xs">
+    <h1 class="text-center">Cadastre um produto</h1>
+
+
+    <div class="form-group w-50 mx-auto">
+        <label for="Nome">Nome:</label>
+        <input type="text" class="form-control" placeholder="Digite o nome do item" [(ngModel)]="produto.nome">
+    </div>
+
+    <div class="form-group w-50 mx-auto">
+        <label for="Preco">Preço:</label>
+        <input type="number" class="form-control" placeholder="Digite o valor" [(ngModel)]="produto.preco">
+    </div>
+
+    <div class="form-group w-50 mx-auto">
+        <label for="Imagem">Imagem:</label>
+        <input type="text" class="form-control" placeholder="Digite a URL da imagem" [(ngModel)]="produto.imagem">
+    </div>
+
+    <div class="form-group w-50 mx-auto">
+        <label for="Quantidade">Quantidade em estoque:</label>
+        <input type="number" class="form-control" placeholder="Digite a URL da imagem" [(ngModel)]="produto.qtdEstoque">
+    </div>
+
+    <div class="d-flex w-50 mx-auto justify-content-end">
+        <button class="btn btn-outline-info" (click)=publicar()>Publicar</button>
+
+    </div>
+
+
+</div>
+
+<app-lista-produtos></app-lista-produtos>

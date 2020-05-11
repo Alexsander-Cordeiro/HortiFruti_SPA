@@ -1,0 +1,40 @@
+<main class="row">
+
+    <div class="col-md-4">
+        <div class="card mx-auto" style="width: 18rem">
+
+            <img src="{{produto.imagem}} " class="card-img-top " alt=" ">
+
+            <div class="card-header ">
+                <h5 class="card-title text-center ">{{produto.nome}}</h5>
+            </div>
+
+            <div class="card-body ">
+                <p>Código: {{produto.id}}</p>
+                <p>Preço: R{{produto.preco | currency}}</p>
+                <p>Quantidade em estoque: {{produto.qtdEstoque}}</p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="col-md-8">
+        <h1 class="text-center">Deletar</h1>
+
+
+        <h5 class="text-center mt-4">Tem certeza que quer deletar?</h5>
+
+        <div class="d-flex justify-content-center mb-0">
+            <button class="btn btn-outline-success mr-4" (click)="btnSim()">Sim</button>
+            <button class="btn btn-outline-danger" (click)="btnNao()">Não</button>
+        </div>
+
+
+    </div>
+
+
+
+</main>
