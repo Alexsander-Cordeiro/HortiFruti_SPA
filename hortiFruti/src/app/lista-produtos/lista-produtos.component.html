@@ -1,32 +1,35 @@
 <div class="container-xs row justify-content-center">
 
+    <h2 class="text-center">Produtos</h2>
 
-    <div class="card m-5" style="width: 18rem" *ngFor="let produto of listaProdutos | orderBy : key:reverse">
-        <img src="{{produto.imagem}}" class="card-img-top" alt="">
+    <section class="row justify-content-center">
 
-        <div class="card-header">
-            <h5 class="card-title text-center">{{produto.nome}}</h5>
-        </div>
+        <div class="card m-5" style="width: 18rem" *ngFor="let produto of listaProdutos | orderBy : key:reverse">
+            <img src="{{produto.imagem}}" class="card-img-top" alt="">
 
-        <div class="card-body">
-            <p>Código: {{produto.id}}</p>
-            <p>Preço: R{{produto.preco | currency}}</p>
-            <p>Quantidade em estoque: {{produto.qtdEstoque}}</p>
-
-            <div class="d-flex justify-content-center">
-
-                <!-- Fazendo routerLink como propetes para passar algum dado -->
-                <button class="btn btn-outline-info  mr-3" [routerLink]="['/put-produtos',produto.id]">Editar</button>
-                <button class="btn btn-outline-danger" [routerLink]="['/delete-produto',produto.id]">Apagar</button>
+            <div class="card-header">
+                <h5 class="card-title text-center">{{produto.nome}}</h5>
             </div>
+
+            <div class="card-body">
+                <p>Código: {{produto.id}}</p>
+                <p>Preço: R{{produto.preco | currency}}</p>
+                <p>Quantidade em estoque: {{produto.qtdEstoque}}</p>
+
+                <div class="d-flex justify-content-center">
+
+                    <!-- Fazendo routerLink como propetes para passar algum dado -->
+                    <button class="btn btn-outline-info  mr-3" [routerLink]="['/put-produtos',produto.id]">Editar</button>
+                    <button class="btn btn-outline-danger" [routerLink]="['/delete-produto',produto.id]">Apagar</button>
+                </div>
+            </div>
+
+
         </div>
 
 
-    </div>
 
-
-
-
+    </section>
 
 
 </div>
